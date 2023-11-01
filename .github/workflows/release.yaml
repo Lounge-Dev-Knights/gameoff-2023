@@ -5,7 +5,7 @@ permissions: write-all
 
 env:
   # Godot version to use for build
-  GODOT_VERSION: 4.1.2
+  GODOT_VERSION: 4.1.3
   # Prerelease if applicable (e.g beta1), else empty
   GODOT_PRERELEASE: ""
   # Prefix of the release asset (zip files)
