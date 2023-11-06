@@ -34,3 +34,6 @@ visible = false
 offset_right = 40.0
 offset_bottom = 23.0
 text = "F to Pickup"
+
+[connection signal="body_entered" from="PickupArea" to="." method="_on_pickup_area_body_entered"]
+[connection signal="body_exited" from="PickupArea" to="." method="_on_pickup_area_body_exited"]

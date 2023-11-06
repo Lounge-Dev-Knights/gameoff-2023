@@ -13,9 +13,7 @@ var hold_item_collision_layer := 0
 var hold_item_collision_mask := 0
 var highlight_item: RigidBody2D
 
-func _process(delta: float) -> void:
-	update_highlight()
-	
+func _process(delta: float) -> void: 
 	if Input.is_action_just_pressed("pickup"):
 		if hold_item != null:
 			drop()
@@ -90,3 +88,11 @@ func get_total_mass() -> float:
 		total_mass += hold_item.mass
 	
 	return total_mass
+
+
+func _on_pickup_area_body_entered(body: Node2D) -> void:
+	update_highlight()
+
+
+func _on_pickup_area_body_exited(body: Node2D) -> void:
+	update_highlight()
