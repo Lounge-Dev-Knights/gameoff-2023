@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	
 	if position.y > 512:
-		position = Vector2(0, -64)
+		position = Vector2(0, -256)
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta

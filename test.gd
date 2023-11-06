@@ -23,7 +23,7 @@ func _process(delta: float) -> void:
 	animation.seek(clamp(animation.current_animation_position + slope * delta, -1, 1), true)
 	
 	
-	if animation.current_animation_position < 0.0001 or  animation.current_animation_position > 0.9999:
+	if animation.current_animation_position < 0.001 or  animation.current_animation_position > 0.999:
 		gameover()
 		
 

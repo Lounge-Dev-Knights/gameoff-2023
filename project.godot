@@ -39,9 +39,10 @@ reset={
 2d_physics/layer_1="platform"
 2d_physics/layer_2="character"
 2d_physics/layer_3="items"
-2d_physics/layer_4="house"
+2d_physics/layer_4="ground"
 
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.752941, 0.580392, 0.45098, 1)
