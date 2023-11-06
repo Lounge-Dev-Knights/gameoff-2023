@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://csi5r4g7akty3"]
+
+[ext_resource type="Script" path="res://item.gd" id="1_1he63"]
+[ext_resource type="Texture2D" uid="uid://cdppkvekrsslb" path="res://nut.png" id="2_fkw1x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cqlfy"]
+size = Vector2(64, 64)
+
+[node name="Item" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 5
+can_sleep = false
+script = ExtResource("1_1he63")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cqlfy")
+
+[node name="Nut" type="Sprite2D" parent="."]
+use_parent_material = true
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_fkw1x")

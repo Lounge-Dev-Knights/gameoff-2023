@@ -1,0 +1,37 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://i2vlo1yphmnu"]
+
+[sub_resource type="Shader" id="5"]
+code = "shader_type canvas_item;
+
+uniform vec4 highlight_color: source_color = vec4(1.0);
+
+uniform float width = 8.0;
+
+bool is_color_visible(vec4 color) {
+	return (color.r + color.b + color.g) * color.a > 0.0;
+}
+
+bool has_neighbour(vec2 fragment, sampler2D tex, vec2 texture_pixel_size) {
+	for (float x = -width; x < width; x++) {
+		for (float y = -width; y < width; y++) {
+			if (is_color_visible(texture(tex, fragment + texture_pixel_size * vec2(x, y)))) {
+				return true;
+			}
+		}
+	}
+	
+	return false;
+}
+
+void fragment() {
+	COLOR = texture(TEXTURE, UV);
+	
+	if (!is_color_visible(COLOR) && has_neighbour(UV, TEXTURE, TEXTURE_PIXEL_SIZE)) {
+		COLOR = highlight_color;
+	}
+}"
+
+[resource]
+shader = SubResource("5")
+shader_parameter/highlight_color = Color(1, 1, 1, 1)
+shader_parameter/width = 8.0
