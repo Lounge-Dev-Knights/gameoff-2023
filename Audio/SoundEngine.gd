@@ -9,7 +9,7 @@ const sounds = {
 		},
 	"MenuButtonHoverSound": {
 		"stream": preload("res://Audio/Sound/MenuButtonHoverSound.wav"),
-		"volume": -40
+		"volume": -0
 		},
 	"Impact": {
 		"stream": preload("res://Audio/Sound/Impact1.wav"),

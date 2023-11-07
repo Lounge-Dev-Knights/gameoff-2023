@@ -26,6 +26,7 @@ func _process(delta: float) -> void:
 	
 	if animation.current_animation_position < 0.001 or  animation.current_animation_position > 0.999:
 		gameover()
+		SoundEngine.play_sound("Explosion")
 		
 
 func gameover() -> void:

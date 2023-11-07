@@ -55,12 +55,14 @@ func pickup(body: RigidBody2D) -> void:
 	body.collision_mask = 0
 	body.collision_layer = 0
 	hold_item = body
+	SoundEngine.play_sound("MenuButtonHoverSound")
 	
 func drop() -> void:
 	hold_item.freeze = false
 	hold_item.collision_mask = hold_item_collision_mask
 	hold_item.collision_layer = hold_item_collision_layer
 	hold_item = null
+	SoundEngine.play_sound("MenuButtonHoverSound")
 
 func update_highlight() -> void:
 	if highlight_item:
