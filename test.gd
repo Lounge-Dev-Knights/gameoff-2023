@@ -9,14 +9,19 @@ func _ready() -> void:
 	MusicEngine.play_song("Music1")
 
 var running := true
+var score := 0.0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("reset"):
 		get_tree().reload_current_scene()
 	
+	
+	
 	if not running:
 		return
+	
+	score += delta
 	
 	var slope: float = 0.2 * clamp(abs($Platform.rotation) - 0.05, 0, 0.2) * sign($Platform.rotation)
 
@@ -35,7 +40,9 @@ func gameover() -> void:
 	tween.set_ease(Tween.EASE_IN)
 	tween.tween_property($Platform/House, "global_position", $Platform/House.global_position + Vector2(0, 1024), 2.0)
 	tween.play()
-	$Platform/House
+	$CanvasLayer/GameOver.score = score
+	$CanvasLayer/GameOver.show()
+	
 
 func _physics_process(delta: float) -> void:
 	$Platform.apply_torque(10000 * pow($Platform.rotation_degrees, 2) * -sign($Platform.rotation))

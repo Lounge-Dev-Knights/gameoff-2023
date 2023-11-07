@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://c2vtj8opy4lti"]
+[gd_scene load_steps=12 format=3 uid="uid://c2vtj8opy4lti"]
 
 [ext_resource type="Script" path="res://test.gd" id="1_47kdv"]
 [ext_resource type="Texture2D" uid="uid://drg7nvodsfiki" path="res://Unbenannt 4.png" id="2_jo3u6"]
 [ext_resource type="PackedScene" uid="uid://c7hel0i4i0cq0" path="res://character.tscn" id="2_oaec5"]
 [ext_resource type="Texture2D" uid="uid://bc2i6r5b71i75" path="res://house.png" id="2_svc62"]
+[ext_resource type="PackedScene" uid="uid://d1uwdv332j66b" path="res://game_over.tscn" id="5_lbaop"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_riunm"]
 radius = 1.0
@@ -142,5 +143,10 @@ polygon = PackedVector2Array(-962, 279, -661, 248, -377, 254, -116, 277, 120, 25
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GameOver" parent="CanvasLayer" instance=ExtResource("5_lbaop")]
+visible = false
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
