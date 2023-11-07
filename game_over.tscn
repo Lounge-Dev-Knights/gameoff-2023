@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1uwdv332j66b"]
+[gd_scene load_steps=3 format=3 uid="uid://qy2j3l7nao4e"]
 
-[ext_resource type="Theme" uid="uid://bm4dq4d3pa137" path="res://default_theme.tres" id="1_mhr3w"]
+[ext_resource type="Theme" uid="uid://ddkprhjtk8u51" path="res://default_theme.tres" id="1_mhr3w"]
 [ext_resource type="Script" path="res://game_over.gd" id="1_p0y1k"]
 
 [node name="GameOver" type="CenterContainer"]
@@ -38,4 +38,5 @@ text = "Score: 0"
 layout_mode = 2
 text = "Restart"
 
+[connection signal="mouse_entered" from="PanelContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

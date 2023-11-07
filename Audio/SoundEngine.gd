@@ -5,7 +5,7 @@ const POOL_SIZE = 8
 const sounds = {
 	"MenuButtonSound": {
 		"stream": preload("res://Audio/Sound/MenuButtonSound.wav"),
-		"volume": -20
+		"volume": -0
 		},
 	"MenuButtonHoverSound": {
 		"stream": preload("res://Audio/Sound/MenuButtonHoverSound.wav"),

@@ -22,9 +22,9 @@ var tween: Tween
 const songs = {
 	"Music1": {
 		"stream": preload("res://Audio/Music/Music_01.mp3"),
-		"volume": -50,
+		"volume": -0,
 #		"secondary_stream": preload("res://sound/music/Al'phant-walking.ogg"),
-		"volume_secondary": -25
+		"volume_secondary": -0
 	},
 	#"Awakening": {
 	#	"stream": preload("res://audio/songs/ZitronSound - Awakening.ogg"),

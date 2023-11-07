@@ -8,3 +8,7 @@ var score := 0:
 
 func _on_button_pressed() -> void:
 	get_tree().reload_current_scene()
+	SoundEngine.play_sound("MenuButtonSound")
+
+func _on_button_mouse_entered():
+	SoundEngine.play_sound("MenuButtonHoverSound")
