@@ -6,6 +6,7 @@ var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _ready() -> void:
 	randomize()
 	$Platform/HouseAnimation.seek(0.5, true)
+	MusicEngine.play_song("Music1")
 
 var running := true
 
