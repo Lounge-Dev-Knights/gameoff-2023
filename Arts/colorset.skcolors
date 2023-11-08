@@ -1,0 +1,266 @@
+{
+    "version": 1,
+    "name": "Apollo",
+    "colorsets": [
+        {
+            "name": "Apollo",
+            "colors": [
+                "172038",
+                "253A5E",
+                "3C5E8B",
+                "4F8FBA",
+                "73BED3",
+                "A4DDDB",
+                "19322C",
+                "25562E",
+                "468232",
+                "75A743",
+                "A8CA58",
+                "D0DA91",
+                "4D2B32",
+                "7A4841",
+                "AD7757",
+                "C09473",
+                "D7B594",
+                "E7D5B3",
+                "341C27",
+                "602C2C",
+                "884B2B",
+                "BE772B",
+                "DE9E41",
+                "E8C170",
+                "241527",
+                "411D31",
+                "752438",
+                "A53030",
+                "CF573C",
+                "DA863E",
+                "1E1D39",
+                "402751",
+                "7A367B",
+                "A23E8C",
+                "C65197",
+                "DF84A5",
+                "090A14",
+                "10141F",
+                "151D28",
+                "202E37",
+                "394A50",
+                "577277",
+                "819796",
+                "A8B5B2",
+                "C7CFCC",
+                "EBEDE9"
+            ]
+        },
+        {
+            "name": "Untitled 2",
+            "localizations": {
+                "de": "Unbenannt 2",
+                "en": "Untitled 2",
+                "es": "Sin título 2",
+                "fr": "Sans titre 2",
+                "it": "Senza nome 2",
+                "ja": "名称未設定 2",
+                "ko": "제목 없음 2",
+                "pt": "Sem título 2",
+                "ru": "Без имени 2",
+                "zh-Hans": "无标题 2",
+                "zh-Hant": "未命名 2"
+            },
+            "colors": [
+
+            ]
+        },
+        {
+            "name": "Untitled 3",
+            "localizations": {
+                "de": "Unbenannt 3",
+                "en": "Untitled 3",
+                "es": "Sin título 3",
+                "fr": "Sans titre 3",
+                "it": "Senza nome 3",
+                "ja": "名称未設定 3",
+                "ko": "제목 없음 3",
+                "pt": "Sem título 3",
+                "ru": "Без имени 3",
+                "zh-Hans": "无标题 3",
+                "zh-Hant": "未命名 3"
+            },
+            "colors": [
+
+            ]
+        },
+        {
+            "name": "Untitled 4",
+            "localizations": {
+                "de": "Unbenannt 4",
+                "en": "Untitled 4",
+                "es": "Sin título 4",
+                "fr": "Sans titre 4",
+                "it": "Senza nome 4",
+                "ja": "名称未設定 4",
+                "ko": "제목 없음 4",
+                "pt": "Sem título 4",
+                "ru": "Без имени 4",
+                "zh-Hans": "无标题 4",
+                "zh-Hant": "未命名 4"
+            },
+            "colors": [
+
+            ]
+        },
+        {
+            "name": "Untitled 5",
+            "localizations": {
+                "de": "Unbenannt 5",
+                "en": "Untitled 5",
+                "es": "Sin título 5",
+                "fr": "Sans titre 5",
+                "it": "Senza nome 5",
+                "ja": "名称未設定 5",
+                "ko": "제목 없음 5",
+                "pt": "Sem título 5",
+                "ru": "Без имени 5",
+                "zh-Hans": "无标题 5",
+                "zh-Hant": "未命名 5"
+            },
+            "colors": [
+
+            ]
+        },
+        {
+            "name": "Untitled 6",
+            "localizations": {
+                "de": "Unbenannt 6",
+                "en": "Untitled 6",
+                "es": "Sin título 6",
+                "fr": "Sans titre 6",
+                "it": "Senza nome 6",
+                "ja": "名称未設定 6",
+                "ko": "제목 없음 6",
+                "pt": "Sem título 6",
+                "ru": "Без имени 6",
+                "zh-Hans": "无标题 6",
+                "zh-Hant": "未命名 6"
+            },
+            "colors": [
+
+            ]
+        },
+        {
+            "name": "Untitled 7",
+            "localizations": {
+                "de": "Unbenannt 7",
+                "en": "Untitled 7",
+                "es": "Sin título 7",
+                "fr": "Sans titre 7",
+                "it": "Senza nome 7",
+                "ja": "名称未設定 7",
+                "ko": "제목 없음 7",
+                "pt": "Sem título 7",
+                "ru": "Без имени 7",
+                "zh-Hans": "无标题 7",
+                "zh-Hant": "未命名 7"
+            },
+            "colors": [
+
+            ]
+        },
+        {
+            "name": "Untitled 8",
+            "localizations": {
+                "de": "Unbenannt 8",
+                "en": "Untitled 8",
+                "es": "Sin título 8",
+                "fr": "Sans titre 8",
+                "it": "Senza nome 8",
+                "ja": "名称未設定 8",
+                "ko": "제목 없음 8",
+                "pt": "Sem título 8",
+                "ru": "Без имени 8",
+                "zh-Hans": "无标题 8",
+                "zh-Hant": "未命名 8"
+            },
+            "colors": [
+
+            ]
+        },
+        {
+            "name": "Untitled 9",
+            "localizations": {
+                "de": "Unbenannt 9",
+                "en": "Untitled 9",
+                "es": "Sin título 9",
+                "fr": "Sans titre 9",
+                "it": "Senza nome 9",
+                "ja": "名称未設定 9",
+                "ko": "제목 없음 9",
+                "pt": "Sem título 9",
+                "ru": "Без имени 9",
+                "zh-Hans": "无标题 9",
+                "zh-Hant": "未命名 9"
+            },
+            "colors": [
+
+            ]
+        },
+        {
+            "name": "Untitled 10",
+            "localizations": {
+                "de": "Unbenannt 10",
+                "en": "Untitled 10",
+                "es": "Sin título 10",
+                "fr": "Sans titre 10",
+                "it": "Senza nome 10",
+                "ja": "名称未設定 10",
+                "ko": "제목 없음 10",
+                "pt": "Sem título 10",
+                "ru": "Без имени 10",
+                "zh-Hans": "无标题 10",
+                "zh-Hant": "未命名 10"
+            },
+            "colors": [
+
+            ]
+        },
+        {
+            "name": "Untitled 11",
+            "localizations": {
+                "de": "Unbenannt 11",
+                "en": "Untitled 11",
+                "es": "Sin título 11",
+                "fr": "Sans titre 11",
+                "it": "Senza nome 11",
+                "ja": "名称未設定 11",
+                "ko": "제목 없음 11",
+                "pt": "Sem título 11",
+                "ru": "Без имени 11",
+                "zh-Hans": "无标题 11",
+                "zh-Hant": "未命名 11"
+            },
+            "colors": [
+
+            ]
+        },
+        {
+            "name": "Untitled 12",
+            "localizations": {
+                "de": "Unbenannt 12",
+                "en": "Untitled 12",
+                "es": "Sin título 12",
+                "fr": "Sans titre 12",
+                "it": "Senza nome 12",
+                "ja": "名称未設定 12",
+                "ko": "제목 없음 12",
+                "pt": "Sem título 12",
+                "ru": "Без имени 12",
+                "zh-Hans": "无标题 12",
+                "zh-Hant": "未命名 12"
+            },
+            "colors": [
+
+            ]
+        }
+    ]
+}
