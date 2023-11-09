@@ -13,13 +13,22 @@ var hold_item_collision_layer := 0
 var hold_item_collision_mask := 0
 var highlight_item: RigidBody2D
 
+var throw_start = null
+var throw_direction = 1.0
+
 func _process(delta: float) -> void: 
+	
 	if Input.is_action_just_pressed("pickup"):
 		if hold_item != null:
-			drop()
+			# drop()
+			throw_start = Time.get_ticks_msec()
 		elif highlight_item != null:
 			pickup(highlight_item)
-		
+	
+	if Input.is_action_just_released("pickup"):
+		if hold_item != null and throw_start != null:
+			drop()
+	
 	if hold_item != null:
 		hold_item.global_position = hold_item.global_position.lerp(global_position + Vector2(0, -32), 10 * delta)
 	
@@ -45,7 +54,10 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	
+	if abs(direction) > 0.1:
+		throw_direction = sign(direction)
+	
 	move_and_slide()
 
 
@@ -62,6 +74,11 @@ func drop() -> void:
 	hold_item.freeze = false
 	hold_item.collision_mask = hold_item_collision_mask
 	hold_item.collision_layer = hold_item_collision_layer
+	
+	var throw_force = Vector2(throw_direction, -1.0).normalized() * clampf(Time.get_ticks_msec() - throw_start, 0, 1000)
+	hold_item.apply_central_impulse(throw_force)
+	
+	throw_start = null
 	hold_item = null
 	SoundEngine.play_sound("MenuButtonHoverSound")
 

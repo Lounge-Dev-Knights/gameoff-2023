@@ -48,8 +48,8 @@ text = "Restart"
 [node name="MarginContainer" type="MarginContainer" parent="LeaderboardPanel"]
 offset_left = 4.0
 offset_top = 4.0
-offset_right = 260.0
-offset_bottom = 241.0
+offset_right = 536.0
+offset_bottom = 258.0
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
