@@ -72,6 +72,11 @@ jobs:
 
     - run: mkdir -p /tmp/build
 
+    - name: Substitute leaderboard key
+      run: sed -i "s/LEADERBOARD_API_KEY/$LEADERBOARD_API_KEY/g" ./leaderboard.gd
+      env:
+        LEADERBOARD_API_KEY: ${{ secrets.LEADERBOARD_API_KEY }}
+
     - name: Build for linux
       run: |
         ./bin/Godot_v*_linux.x86_64 --headless --export-release linux /tmp/build/${{ env.PACKAGE_PREFIX }}-${{ needs.DefineVersion.outputs.version }}-linux.x86_64
@@ -136,6 +141,12 @@ jobs:
         GODOT_PRERELEASE: ${{ env.GODOT_PRERELEASE }}
 
     - run: mkdir -p /tmp/build
+
+    - name: Substitute leaderboard key
+      run: sed -i "" "s/LEADERBOARD_API_KEY/$LEADERBOARD_API_KEY/g" ./leaderboard.gd
+      env:
+        LEADERBOARD_API_KEY: ${{ secrets.LEADERBOARD_API_KEY }}
+        
 
     - name: Build for macos
       run: |
