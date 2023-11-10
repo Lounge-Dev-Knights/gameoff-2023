@@ -14,7 +14,7 @@ func _physics_process(delta):
 			var distance = (body.global_position - global_position).length()
 			rotation
 			var direction = Vector2.RIGHT.rotated(rotation)
-			var force = blow_force-((3000-distance)*0.5)
+			var force = blow_force-((700-distance)*0.5)
 			body.apply_central_force(direction*force)
 
 

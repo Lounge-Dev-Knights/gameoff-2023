@@ -168,7 +168,7 @@ offset_bottom = 23.0
 visible = false
 
 [node name="Leafblower" parent="." instance=ExtResource("7_b5jy1")]
-position = Vector2(51, -39)
+position = Vector2(-10, -310)
 
 [node name="Item" parent="." instance=ExtResource("8_pras1")]
 position = Vector2(-516, -45)
