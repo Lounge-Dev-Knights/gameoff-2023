@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c2vtj8opy4lti"]
+[gd_scene load_steps=15 format=3 uid="uid://c2vtj8opy4lti"]
 
 [ext_resource type="Script" path="res://test.gd" id="1_47kdv"]
 [ext_resource type="Texture2D" uid="uid://drg7nvodsfiki" path="res://Unbenannt 4.png" id="2_jo3u6"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bc2i6r5b71i75" path="res://house.png" id="2_svc62"]
 [ext_resource type="PackedScene" uid="uid://qy2j3l7nao4e" path="res://game_over.tscn" id="5_lbaop"]
 [ext_resource type="Texture2D" uid="uid://bgcdlcrub5oa0" path="res://leaf.png" id="5_xxsfj"]
+[ext_resource type="PackedScene" uid="uid://3f68fkaorx50" path="res://Leafblower.tscn" id="7_b5jy1"]
+[ext_resource type="PackedScene" uid="uid://csi5r4g7akty3" path="res://item.tscn" id="8_pras1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_riunm"]
 radius = 1.0
@@ -164,5 +166,23 @@ offset_bottom = 23.0
 
 [node name="GameOver" parent="CanvasLayer" instance=ExtResource("5_lbaop")]
 visible = false
+
+[node name="Leafblower" parent="." instance=ExtResource("7_b5jy1")]
+position = Vector2(-10, -310)
+
+[node name="Item" parent="." instance=ExtResource("8_pras1")]
+position = Vector2(-516, -45)
+
+[node name="Item2" parent="." instance=ExtResource("8_pras1")]
+position = Vector2(-235, -44)
+
+[node name="Item3" parent="." instance=ExtResource("8_pras1")]
+position = Vector2(90, -36)
+
+[node name="Item4" parent="." instance=ExtResource("8_pras1")]
+position = Vector2(353, -42)
+
+[node name="Item5" parent="." instance=ExtResource("8_pras1")]
+position = Vector2(636, -41)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
