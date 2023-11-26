@@ -23,12 +23,12 @@ func _process(delta: float) -> void:
 
 	var animation: AnimationPlayer = $Platform/HouseAnimation
 	animation.seek(clamp(animation.current_animation_position + slope * delta, -1, 1), true)
-	
-	
+
+
 	if animation.current_animation_position < 0.001 or  animation.current_animation_position > 0.999:
 		gameover()
 		SoundEngine.play_sound("Explosion")
-		
+
 
 func gameover() -> void:
 	running = false
@@ -38,7 +38,7 @@ func gameover() -> void:
 	tween.play()
 	$CanvasLayer/GameOver.score = score
 	$CanvasLayer/GameOver.show()
-	
+
 
 func _physics_process(delta: float) -> void:
 	$Platform.apply_torque(10000 * pow($Platform.rotation_degrees, 2) * -sign($Platform.rotation))
@@ -52,9 +52,14 @@ const ITEMS = [
 	preload("res://items/birchnut.tscn"),
 	preload("res://items/acorn.tscn"),
 	preload("res://items/leaf_1.tscn"),
+	preload("res://items/leaf_2.tscn"),
+	preload("res://items/leaf_3.tscn"),
+	preload("res://items/leaf_4.tscn"),
+	preload("res://items/leaf_5.tscn"),
 ]
+
 
 func _on_timer_timeout() -> void:
 	var item = ITEMS[randi() % ITEMS.size()].instantiate()
-	item.position = Vector2(randf_range(-512, 512), -256)
+	item.position = Vector2(randf_range(-512, 512), -1024)
 	add_child(item)

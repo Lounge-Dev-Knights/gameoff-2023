@@ -11,6 +11,7 @@ can_sleep = false
 script = ExtResource("1_m1thn")
 
 [node name="Sprite" type="Sprite2D" parent="."]
+use_parent_material = true
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_pa4ay")
 
