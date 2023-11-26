@@ -48,8 +48,13 @@ func _physics_process(delta: float) -> void:
 		$Platform.apply_force(Vector2.DOWN * mass * gravity, $Character.position)
 
 
+const ITEMS = [
+	preload("res://items/birchnut.tscn"),
+	preload("res://items/acorn.tscn"),
+	preload("res://items/leaf_1.tscn"),
+]
+
 func _on_timer_timeout() -> void:
-	var item = preload("res://item.tscn").instantiate()
+	var item = ITEMS[randi() % ITEMS.size()].instantiate()
 	item.position = Vector2(randf_range(-512, 512), -256)
-	item.size = randf_range(16, 64)
 	add_child(item)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cercwuplans65"]
+
+[ext_resource type="Script" path="res://items/item.gd" id="1_e34u2"]
+[ext_resource type="Texture2D" uid="uid://wfq6msatxrgd" path="res://items/leaf_1.png" id="2_xqw7y"]
+
+[node name="Leaf1" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 5
+mass = 0.2
+can_sleep = false
+script = ExtResource("1_e34u2")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_xqw7y")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-49, 0, -42, -32, -16, -18, 0, -46, 22, -18, 60, -21, 62, 11, 38.9416, 23.7338, 59, 34, -5, 48, -54, 24, -31, 13)

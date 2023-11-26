@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdppkvekrsslb"
-path="res://.godot/imported/nut.png-5523be4431123e629041d7f50234e6ff.ctex"
+uid="uid://c0l7hwt5155u4"
+path="res://.godot/imported/leaf_5.png-de54bf3052ba619a9de6a21a2767a7df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://nut.png"
-dest_files=["res://.godot/imported/nut.png-5523be4431123e629041d7f50234e6ff.ctex"]
+source_file="res://items/leaf_5.png"
+dest_files=["res://.godot/imported/leaf_5.png-de54bf3052ba619a9de6a21a2767a7df.ctex"]
 
 [params]
 

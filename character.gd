@@ -17,7 +17,6 @@ var throw_start = null
 var throw_direction = 1.0
 
 func _process(delta: float) -> void: 
-	
 	if Input.is_action_just_pressed("pickup"):
 		if hold_item != null:
 			# drop()
@@ -31,8 +30,9 @@ func _process(delta: float) -> void:
 	
 	if hold_item != null:
 		hold_item.global_position = hold_item.global_position.lerp(global_position + Vector2(0, -32), 10 * delta)
-	
-	
+
+
+var last_direction = 1
 func _physics_process(delta: float) -> void:
 	
 	if position.y > 512:
@@ -51,9 +51,17 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
+		last_direction = direction
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+	if hold_item:
+			var platform = get_tree().get_nodes_in_group("platform")[0]
+			
+			hold_item.rotation = platform.rotation
+			if last_direction < 0:
+				hold_item.rotation += PI
 	
 	if abs(direction) > 0.1:
 		throw_direction = sign(direction)
@@ -69,7 +77,8 @@ func pickup(body: RigidBody2D) -> void:
 	body.collision_layer = 0
 	hold_item = body
 	SoundEngine.play_sound("MenuButtonHoverSound")
-	
+
+
 func drop() -> void:
 	hold_item.freeze = false
 	hold_item.collision_mask = hold_item_collision_mask

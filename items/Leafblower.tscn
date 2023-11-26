@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://3f68fkaorx50"]
 
-[ext_resource type="Script" path="res://Leafblower.gd" id="1_0g340"]
+[ext_resource type="Script" path="res://items/Leafblower.gd" id="1_0g340"]
 [ext_resource type="Texture2D" uid="uid://x5ijtsg700xa" path="res://Arts/leafbblower.png" id="2_i3tni"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u112m"]
