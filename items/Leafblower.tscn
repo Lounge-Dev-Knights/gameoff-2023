@@ -1,10 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://3f68fkaorx50"]
+[gd_scene load_steps=6 format=3 uid="uid://3f68fkaorx50"]
 
 [ext_resource type="Script" path="res://items/Leafblower.gd" id="1_0g340"]
 [ext_resource type="Texture2D" uid="uid://x5ijtsg700xa" path="res://Arts/leafbblower.png" id="2_i3tni"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u112m"]
 size = Vector2(58, 28)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r7gal"]
+bg_color = Color(0.207843, 0.207843, 0.207843, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_532bt"]
+bg_color = Color(1, 1, 1, 1)
 
 [node name="Leafblower" type="RigidBody2D"]
 collision_layer = 4
@@ -29,3 +35,14 @@ position = Vector2(-23, 2)
 rotation = -1.0472
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("2_i3tni")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+top_level = true
+offset_right = 8.0
+offset_bottom = 48.0
+theme_override_styles/background = SubResource("StyleBoxFlat_r7gal")
+theme_override_styles/fill = SubResource("StyleBoxFlat_532bt")
+max_value = 5.0
+value = 5.0
+fill_mode = 3
+show_percentage = false
